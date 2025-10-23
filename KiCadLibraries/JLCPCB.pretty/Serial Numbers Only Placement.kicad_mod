@@ -1,0 +1,73 @@
+(footprint "Serial Numbers Only Placement"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "JCLPCB Serial Numbers-Only Placement Box 2mm x 10mm")
+	(tags "Serial Numbers-Only Placement Box")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "61ce32e4-e73b-4d1f-bd97-4876e5dba9ec")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Serial Numbers Only Placement"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cbc7e386-a660-42c6-9ddf-288d8b0f7bfa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "af811e44-b636-484a-b6b2-e4c5d8afbe2b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "JCLPCB Serial Numbers-Only Placement Box 2mm x 10mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8185cde5-8ad8-4fe0-9953-a3eb528ac58d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr board_only exclude_from_bom)
+	(fp_rect
+		(start -5 -1)
+		(end 5 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "ebc76649-f4f7-48d4-8644-55ed11bf7097")
+	)
+	(embedded_fonts no)
+)

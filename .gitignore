@@ -38,3 +38,9 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+*/fab/*
+/KiCadLibraries/Nintendo*
+/KiCadLibraries/Sega*
+
+KiCadLibraries/DiplomaticEntertainment.pretty/DELogo_30x35.kicad_mod

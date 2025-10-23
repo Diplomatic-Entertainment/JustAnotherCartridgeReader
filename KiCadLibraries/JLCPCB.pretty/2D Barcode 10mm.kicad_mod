@@ -1,0 +1,72 @@
+(footprint "2D Barcode 10mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "JLCPCB 2D Barcode Silkscreen Box 10mm*10mm")
+	(tags "JLCPCB 2D Barcode")
+	(property "Reference" "BAR***"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "53e97120-9d9a-4de7-80d7-8df70e929ede")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "2D Barcode 10mm"
+		(at 0 5.8 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b8cc05f6-c13b-4d07-8448-e54ffe258175")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "219da247-dec5-461d-9f1a-06739ff837ac")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "JLCPCB 2D Barcode Silkscreen Box 10mm*10mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b0211f74-7950-4df2-bee7-b90e0486049e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr board_only exclude_from_bom)
+	(fp_rect
+		(start -5 -5)
+		(end 5 5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "c82a2b01-c673-45ff-b899-f0b0ba1c4060")
+	)
+	(embedded_fonts no)
+)
