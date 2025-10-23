@@ -17,7 +17,7 @@ Support for all the same Systems as the OSCR
 JACR complies with Open Source Licensing with source code available for viewing and modifying
 
 ### Open Source Licenses:
-Software(everything in Cart_Reader folder) = GPL v3  
+Software(everything in Firmware folder) = GPL v3  
 Hardware(everything in hardware folder) = CC BY 4.0  
 Complies with the original license of the OSCR where applicable
 
