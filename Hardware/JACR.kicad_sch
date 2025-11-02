@@ -13363,7 +13363,7 @@
 		(at 38.1 24.13 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "449122c3-9953-4be7-9c8a-acd99f1ebfab")
@@ -14601,7 +14601,7 @@
 		(at 41.91 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -15410,7 +15410,7 @@
 		(at 96.52 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -15869,7 +15869,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "45.3kΩ"
+		(property "Value" "33.2kΩ"
 			(at 151.13 35.5599 0)
 			(effects
 				(font
@@ -16626,7 +16626,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "73.2kΩ"
+		(property "Value" "54.9kΩ"
 			(at 88.9 26.6699 0)
 			(effects
 				(font
