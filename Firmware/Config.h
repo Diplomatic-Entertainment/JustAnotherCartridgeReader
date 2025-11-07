@@ -29,8 +29,7 @@
     JACR is based on HW5, do not change this
 */
 
-#define JACR
-//#define HW5
+#define HW5
 //#define HW4
 //#define HW3
 //#define HW2
@@ -189,7 +188,7 @@
 */
 
 #define ENABLE_FLASH8 
-#define ENABLE_FLASH16 
+//#define ENABLE_FLASH16 
 
 /****/
 
@@ -274,42 +273,42 @@
 /* [ Sega Master System/Mark III/Game Gear/SG-1000 ---------------- ]
 */
 
-//#define ENABLE_SMS
+#define ENABLE_SMS
 
 /****/
 
 /* [ Sega Mega Drive/Genesis -------------------------------------- ]
 */
 
-//#define ENABLE_MD
+#define ENABLE_MD
 
 /****/
 
 /* [ Super Famicom SF Memory Cassette (needs ENABLE_SNES)---------- ]
 */
 
-#define ENABLE_SFM
+//#define ENABLE_SFM
 
 /****/
 
 /* [ Super Famicom Satellaview (needs ENABLE_SNES)----------------- ]
 */
 
-#define ENABLE_SV
+//#define ENABLE_SV
 
 /****/
 
 /* [ Super Famicom Sufami Turbo (needs ENABLE_SNES)---------------- ]
 */
 
-#define ENABLE_ST
+//#define ENABLE_ST
 
 /****/
 
 /* [ Super Famicom Game Processor RAM Cassette (needs ENABLE_SNES)- ]
 */
 
-#define ENABLE_GPC
+//#define ENABLE_GPC
 
 /****/
 
@@ -411,7 +410,7 @@ also needs ENABLE_FLASH8 and ENABLE_FLASH16 to be enabled
     Filename: config.txt
 */
 
-#define ENABLE_CONFIG
+//#define ENABLE_CONFIG
 
 /****/
 
@@ -463,7 +462,7 @@ also needs ENABLE_FLASH8 and ENABLE_FLASH16 to be enabled
     Tests for shorts and other issues in your OSCR build.
 */
 
-#define ENABLE_SELFTEST
+//#define ENABLE_SELFTEST
 
 /****/
 
@@ -575,8 +574,7 @@ also needs ENABLE_FLASH8 and ENABLE_FLASH16 to be enabled
 #define CONFIG_VALUE_MAX 32
 #endif
 
-/* JACR is based on HW5 so no need to define it */
-//#if (defined(HW4) || defined(HW5))
+#if (defined(HW4) || defined(HW5))
 #define ENABLE_LCD
 #define ENABLE_NEOPIXEL
 #define ENABLE_ROTARY
@@ -584,26 +582,25 @@ also needs ENABLE_FLASH8 and ENABLE_FLASH16 to be enabled
 #define OPTION_WS_ADAPTER_V2
 #endif
 
-//#if (defined(HW2) || defined(HW3))
-//#define ENABLE_OLED
-//#define ENABLE_BUTTON2
-//#define ENABLE_CA_LED
-//#endif
+#if (defined(HW2) || defined(HW3))
+#define ENABLE_OLED
+#define ENABLE_BUTTON2
+#define ENABLE_CA_LED
+#endif
 
-//#if defined(HW1)
-//#define ENABLE_OLED
-//#endif
+#if defined(HW1)
+#define ENABLE_OLED
+#endif
 
-//#if defined(SERIAL_MONITOR)
-//#define ENABLE_SERIAL
-//#endif
+#if defined(SERIAL_MONITOR)
+#define ENABLE_SERIAL
+#endif
 
 /* Firmware updater only works with HW3 and HW5 */
-// JACR won't be using the updater
-//#if !(defined(HW5) || defined(HW3))
-//#undef ENABLE_UPDATER
-//#endif
+#if !(defined(HW5) || defined(HW3))
+#undef ENABLE_UPDATER
+#endif
 
 /* End of settings */
 
-//#endif /* CONFIG_H_ */
+#endif /* CONFIG_H_ */

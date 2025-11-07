@@ -1284,7 +1284,7 @@ uint8_t pageMenu(const __FlashStringHelper* question, const char* const* menuStr
 // All included slots
 void mainMenu() {
   // wait for user choice to come back from the question box menu
-  switch (pageMenu(F("OPEN SOURCE CART READER"), modeOptions, SYSTEM_MENU_TOTAL)) {
+  switch (pageMenu(F("JUST ANOTHER CART READER"), modeOptions, SYSTEM_MENU_TOTAL)) {
 
 #ifdef ENABLE_GBX
     case SYSTEM_MENU_GBX:
@@ -1758,14 +1758,15 @@ void selfTest() {
 // Info Screen
 void aboutScreen() {
   display_Clear();
-  println_Msg(F("Cartridge Reader"));
-  println_Msg(F("github.com/sanni"));
+  println_Msg(F("Just Another Cartridge Reader"));
+  println_Msg(F("github.com/diplomatic-"));
+  println_Msg(F("entertainment"));
   print_Msg(F("2025 FW "));
   println_Msg(FS(FSTRING_VERSION));
   println_Msg(FS(FSTRING_EMPTY));
   println_Msg(FS(FSTRING_EMPTY));
-  println_Msg(FS(FSTRING_EMPTY));
-  println_Msg(FS(FSTRING_EMPTY));
+  println_Msg(F("Based on the OSCR "));
+  println_Msg(F("github.com/sanni"));
   // Prints string out of the common strings array either with or without newline
   print_STR(press_button_STR, 1);
   display_Update();
@@ -2144,7 +2145,7 @@ int32_t initializeClockOffset() {
 void setup() {
   // Set Button Pin PG2 to Input
   DDRG &= ~(1 << 2);
-#if (defined(HW5) || defined(JACR)) && !defined(ENABLE_VSELECT)
+#if defined(HW5) && !defined(ENABLE_VSELECT)
   /**
      HW5 has status LED connected to PD7
      Set LED Pin PD7 to Output
@@ -2195,7 +2196,7 @@ void setup() {
   setColor_RGB(0, 0, 100);
 
   // Set TX0 LED Pin(PE1) to Output for status indication during flashing for HW4
-#if !(defined(ENABLE_SERIAL) || defined(HW5) || defined(JACR))
+#if !(defined(ENABLE_SERIAL) || defined(HW5))
   DDRE |= (1 << 1);
 #endif /* ENABLE_SERIAL */
 #else  /* !ENABLE_NEOPIXEL */
@@ -2302,8 +2303,6 @@ void setup() {
   print_Msg(F("OSCR HW5"));
 #elif defined(SERIAL_MONITOR)
   print_Msg(F("OSCR Serial"));
-#elif defined(JACR)
-  print_Msg(F("JACR V1"));
 #endif /* HWn */
   print_Msg(FS(FSTRING_SPACE));
   println_Msg(FS(FSTRING_VERSION));
@@ -2815,7 +2814,7 @@ void rgbLed(byte Color) {
 void blinkLED() {
 #if defined(ENABLE_VSELECT)
   // Nothing
-#elif (defined(HW5) || defined(JACR))
+#elif defined(HW5)
   // 3mm LED on D38, front of PCB
   PORTD ^= (1 << 7);
 #elif defined(ENABLE_OLED)
@@ -2832,7 +2831,7 @@ void blinkLED() {
 #endif
 }
 
-#if (defined(HW5) || defined(JACR)) && !defined(ENABLE_VSELECT)
+#if defined(HW5) && !defined(ENABLE_VSELECT)
 // 3mm LED on D38, front of PCB
 void statusLED(boolean on) {
   if (!on)

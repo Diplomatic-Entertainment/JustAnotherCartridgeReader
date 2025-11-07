@@ -76,6 +76,7 @@ Frequency Counter lib: https://github.com/PaulStoffregen/FreqCount
 ### JACR Modifications 
 - Renaming directory from cart_reader to firmware forced cart_reader.ino to be renamed firmware.ino
   - Added JACR as hardware refernce where HW5 is also defined
+  - Made reference back to OSCR in About
 - Modified config.ino
   - JACR is currently based on the HW5 revision
   - Noted to not change HW selection
@@ -86,14 +87,8 @@ Frequency Counter lib: https://github.com/PaulStoffregen/FreqCount
   - Noted to not enable Stability Fix (not need on JACR)
   - Noted to not enable the updated (untested, unlikely to work with intended results) 
   - Enabled SNES Core/CLOCKGEN by default
-  - Comment out ifelse for HW Type
-- Modified oscr.h
-  - Comment out sanity checks to save some bytes
-  - Updater baud rate commented out to save bytes
-  - CS_8MHZ commented out to save the bytes
-  - ENUM for VSELECT & 3V3FIX commented out (unused on JACR)
 - Modified oscr.cpp
   - Added JACR suffix to FSTRING_VERSION
   - Changed FSTRING_OSCR from OSCR to JACR
-  - Comment out setClockScale VOLTS and CLKSCALE
+  - Comment out setClockScale VOLTS and CLKSCALE (unused)
   
