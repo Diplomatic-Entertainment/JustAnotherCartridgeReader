@@ -77,6 +77,8 @@ Frequency Counter lib: https://github.com/PaulStoffregen/FreqCount
 - Renaming directory from cart_reader to firmware forced cart_reader.ino to be renamed firmware.ino
   - Added JACR as hardware refernce where HW5 is also defined
   - Made reference back to OSCR in About
+  - Removed 1K Resistor Check in Self Test
+  - Removed reset on failure in Self Test
 - Modified config.ino
   - JACR is currently based on the HW5 revision
   - Noted to not change HW selection

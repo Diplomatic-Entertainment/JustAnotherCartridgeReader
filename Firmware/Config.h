@@ -462,7 +462,7 @@ also needs ENABLE_FLASH8 and ENABLE_FLASH16 to be enabled
     Tests for shorts and other issues in your OSCR build.
 */
 
-//#define ENABLE_SELFTEST
+#define ENABLE_SELFTEST
 
 /****/
 

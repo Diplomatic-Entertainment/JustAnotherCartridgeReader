@@ -1613,6 +1613,8 @@ void selfTest() {
   println_Msg(FS(FSTRING_EMPTY));
   println_Msg(F("Remove all Cartridges"));
   println_Msg(F("before continuing!"));
+  println_Msg(F("May leave empty"));
+  println_Msg(F("adapater for test"));
 #if (defined(HW3) || defined(HW2))
   println_Msg(F("And turn the EEP switch on."));
 #else
@@ -1625,6 +1627,7 @@ void selfTest() {
   wait();
   display_Clear();
 
+  /*[JACR] This is the 1K resitor for the N64 Controller, that is seperated into its own adapter on JACR, Skip this test
   // Test if pin 7 is held high by 1K resistor
   pinMode(7, INPUT);
   println_Msg(F("Testing 1K resistor "));
@@ -1640,6 +1643,7 @@ void selfTest() {
     wait();
     resetArduino();
   }
+  */
 
   println_Msg(F("Testing short to GND"));
   display_Update();
@@ -1669,7 +1673,7 @@ void selfTest() {
         print_STR(press_button_STR, 1);
         display_Update();
         wait();
-        resetArduino();
+        //resetArduino(); //[JACR] Don't reset on fault, keep testing
       }
     }
   }
@@ -1708,7 +1712,7 @@ void selfTest() {
             print_STR(press_button_STR, 1);
             display_Update();
             wait();
-            resetArduino();
+            //resetArduino(); //[JACR] Don't reset on fault, keep testing
           }
         }
       }
@@ -1727,7 +1731,7 @@ void selfTest() {
     print_STR(press_button_STR, 1);
     display_Update();
     wait();
-    resetArduino();
+    //resetArduino(); //[JACR] Don't reset on fault, keep testing
   } else {
     //clockgen.set_correction(cal_factor, SI5351_PLL_INPUT_XO);
     clockgen.set_pll(SI5351_PLL_FIXED, SI5351_PLLA);
@@ -1743,7 +1747,7 @@ void selfTest() {
   }
 
   println_Msg(FS(FSTRING_EMPTY));
-  println_Msg(F("All tests passed."));
+  println_Msg(F("All tests completed."));
   println_Msg(FS(FSTRING_EMPTY));
   print_STR(press_button_STR, 1);
   display_Update();
